@@ -275,30 +275,93 @@ ul li{
 	background-color: #1f1501;
 }
 
+footer {
+	text-align: right;
+}
+
 footer a:link, footer a:visited{
 	color: white;
 	text-decoration: none;
 }
 
-footer .zen-validate-html, .zen-validate-css, .zen-license, .zen-accessibility, .zen-github {
+
+footer .zen-github {
 	background: url("sun.png");
 	background-size: 6em;
 	background-repeat: no-repeat;
+	background-position: bottom left;
 	display: inline-block;
 	height: 5em;
 	width: 6.5em;
 	overflow: hidden;
 	white-space: nowrap;
 	text-indent: 100%;
-	position: relative;
-	left: 56.5em;
-	top: -6em;
+	padding-top: 2.4em;
+	transition: 1s;
+}
+
+footer .zen-accessibility {
+	background: url("sun.png");
+	background-size: 6em;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	display: inline-block;
+	height: 5em;
+	width: 6.5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
+	padding-top: 2.4em;
+	transition: 1s;
+}
+
+footer .zen-license {
+	background: url("sun.png");
+	background-size: 6em;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	display: inline-block;
+	height: 5em;
+	width: 6.5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
+	padding-top: 2.4em;
+	transition: 1s;
+}
+
+footer .zen-validate-css {
+	background: url("sun.png");
+	background-size: 6em;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	display: inline-block;
+	height: 5em;
+	width: 6.5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
+	padding-top: 2.4em;
+	transition: 1s;
+}
+
+footer .zen-validate-html {
+	background: url("sun.png");
+	background-size: 6em;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	display: inline-block;
+	height: 5em;
+	width: 6.5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
 	transition: 1s;
 	padding-top: 2.4em;
 }
 
 footer .zen-validate-html:hover, .zen-validate-css:hover, .zen-license:hover, .zen-accessibility:hover, .zen-github:hover {
-	top: -8em;
+	background-position: top left;
 	text-indent: -.4%;
 	text-align: center;
 }

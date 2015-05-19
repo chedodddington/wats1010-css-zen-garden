@@ -1,194 +1,304 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-
-/* basic elements */
 html {
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
 	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
+
+body {
+	margin: 0;
 	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
+	background-color: #0d1f27;
+}
 
+.summary a:link, a:visited {
+	color: #f4a32e;
+	padding: .15em;
+	border: .2em solid #610606;
+	background-color: black;
+	text-decoration: none;
+}
 
-/* specific divs */
-.page-wrapper { 
-	background: url(zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
+.summary a:hover {
+	padding: .15em;
+	border: .2em solid #5a4c3f;
+	background-color: #1f1501;
+	color: white;
+}
 
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
+@-webkit-keyframes daychange{
+	0% {background-color: black;
+		background-size: 8em;
+		background-position: bottom right;
+		opacity: 1;} 
+	100% {background: url("sun.png");
+		background-color: #f4a32e;
+		background-size: 12em;
+		background-position: top left;}
+}
 
-header h1 { 
-	background: transparent url(h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
+@keyframes daychange{
+	0% {background-color: black;
+		background-size: 8em;
+		background-position: bottom right;
+		opacity: 1;} 
+	100% {background: url("sun.png");
+		background-color: #f4a32e;
+		background-size: 12em;
+		background-position: top left;}
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
+@-moz-keyframes daychange{
+	0% {background-color: black;
+		background-size: 8em;
+		background-position: bottom right;
+		opacity: 1;} 
+	100% {background: url("sun.png");
+		background-color: #f4a32e;
+		background-size: 12em;
+		background-position: top left;}
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
 header {
-	padding-top: 20px;
-	height: 87px;
+	height: 20em;
+	-webkit-animation: daychange;
+	-moz-animation: daychange;
+	animation:daychange;
+	-webkit-animation-duration: 3s;
+	-moz-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-timing-function: ease-in-out;
+	-moz-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	background-repeat: no-repeat;
+	border-bottom: black dashed .3em;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-family: "Georgia", serif;
+	font-size: 6em;	
+	position: absolute;
+	top: 2.25em;
+	color: #610606;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+	transform: rotate(90deg);
+	position: absolute;
+	top: 6em;
+	right: -5.5em;
+}
+
+h3 {
+	font-family: "Georgia", serif;
+	color: #5a4c3f;
 }
 
 .summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+	margin-right: .75em;
+	text-align: right;
+	color: white;
+}
 
 .preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+	margin: .5em;
+	padding: .5em;
+	padding-top: .25em;
+	width: 70%;
+	border: 1em solid;
+	border-color: black;
+	background: #1f1501;
+	color: white;
+}
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+.preamble:hover {
+	background: #f4a32e;
+	color: black;
+	border-color: white;
+}
+
+.explanation {
+	margin: .5em;
+	padding: .5em;
+	padding-top: .25em;
+	width: 70%;
+	text-align: right;
+	margin-left: 25%;
+	border: 1em solid;
+	background: black;
+	border-color: #1f1501;
+	color: white;
+}
+
+.explanation:hover{
+	background: white;
+	color: #1f1501;
+	border-color: #f4a32e;
+}
+
+.supporting div:not(:first-child) h3{
+	text-align: center;
+	color: white;
+}
+
+.supporting div:not(:first-child) {
+	padding: .3em;
+	margin-left: .5em;
+	background-color: #610606;
+	width: 55%;
+	border-bottom: .4em solid black;
+	color: #f4a32e;
+}
+
+.supporting div:not(:first-child):hover {
+	background-color: #5a4c3f;
+}
+
+.participation {
+	margin-top: 2em;
+	border-top: .4em solid black;
+}
+
+.participation a:link, .participation a:visited, 
+.requirements a:link, .requirements a:visited{
+	color: white;
+}
+
+.participation a:hover, .requirements a:hover{
+	background-color: #1f1501;
+	border: .15em solid black; 
+	text-decoration: none;
+}
 
 .sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+	color:#5a4c3f;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+.sidebar a:link, a:visited{
+	color:white;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
+.sidebar a:hover{
+	color:#f4a32e;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-
-
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
+ul li{
 	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
+}
 
+.sidebar h3 {
+	margin-left: 2em;
+	position: relative;
+	top: 0;
+	text-indent: 0;
+	text-align: center;
+	color: white;
+}
 
-.extra1 {
-	background: transparent url(cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+.sidebar .design-selection{
+	position: absolute;
+	top: 62em;
+	right: 0;
+	width: 2em;
+	transition: 1.5s;
+	white-space: nowrap;
+	background-color: #f4a32e;
+	padding-left: 9.5em;
+	border: .5em dotted #610606;
+	border-right: none;
+	background-image: url("moon.png");
+	background-repeat: no-repeat;
+	background-size: 6.75em;
+	background-position: 3.5em;
+	text-align: center;
+	overflow: hidden;
+}
+
+.sidebar .design-archives{
+	position: absolute;
+	top: 92.5em;
+	right: 0;
+	width: 2em;
+	transition: 1s;
+	white-space: nowrap;
+	background-color: #f4a32e;
+	padding-left: 4.5em;
+	border: .25em dotted #610606;
+	border-right: none;
+	background-image: url("moon.png");
+	background-repeat: no-repeat;
+	background-size: 2.6em;
+	background-position: 1.5em;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.sidebar .zen-resources{
+	position: absolute;
+	top: 79em;
+	right: 0;
+	width: 2em;
+	transition: 1s;
+	white-space: nowrap;
+	background-color: #f4a32e;
+	padding-left: 6em;
+	border: .4em dotted #610606;
+	border-right: none;
+	background-image: url("moon.png");
+	background-repeat: no-repeat;
+	background-size: 4.65em;
+	background-position: 1.5em;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.sidebar .design-selection:hover{
+	width: 30%;
+	background-color: #1f1501
+}
+
+.sidebar .design-archives:hover{
+	width: 15%;
+	background-color: #1f1501
+}
+
+.sidebar .zen-resources:hover{
+	width: 20%;
+	background-color: #1f1501;
+}
+
+footer a:link, footer a:visited{
+	color: white;
+	text-decoration: none;
+}
+
+footer .zen-validate-html, .zen-validate-css, .zen-license, .zen-accessibility, .zen-github {
+	background: url("sun.png");
+	background-size: 6em;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 5em;
+	width: 6.5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
+	position: relative;
+	left: 56.5em;
+	top: -6em;
+	transition: 1s;
+	padding-top: 2.4em;
+}
+
+footer .zen-validate-html:hover, .zen-validate-css:hover, .zen-license:hover, .zen-accessibility:hover, .zen-github:hover {
+	top: -8em;
+	text-indent: -.4%;
+	text-align: center;
+}
